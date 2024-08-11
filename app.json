@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mooday_app",
-    "slug": "mooday_app",
+    "name": "mooday",
+    "slug": "mooday",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,9 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mycompany.mooday"
     },
     "android": {
+      "package": "com.mycompany.mooday",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -28,16 +30,18 @@
     },
     "plugins": [
       "expo-router",
-      "expo-localization",
-      [
-        "@react-native-google-signin/google-signin",
-        {
-          "iosUrlScheme": "com.googleusercontent.apps.128876708418-ef46h5khhd5noil2i9llef07bdfaqjg0"
-        }
-      ]
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "67c7da7b-177f-490b-8cbc-74e3286ed701"
+      }
     }
   }
 }
