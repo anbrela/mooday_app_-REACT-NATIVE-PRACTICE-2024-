@@ -1,4 +1,4 @@
-package com.mooday
+package com.mycompany.mooday
 
 import android.os.Build
 import android.os.Bundle

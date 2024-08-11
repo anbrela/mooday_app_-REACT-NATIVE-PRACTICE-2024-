@@ -1,4 +1,4 @@
-package com.mooday
+package com.mycompany.mooday
 
 import android.app.Application
 import android.content.res.Configuration
