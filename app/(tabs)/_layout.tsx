@@ -2,39 +2,77 @@ import { Tabs } from "expo-router";
 import React from "react";
 
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { Colors } from "@/constants/Colors";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { GRAY, PRIMARY_COLOR } from "@/constants/Colors";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
+          tabBarShowLabel: false,
           title: "Home",
+          headerShown: false,
+          tabBarIconStyle: { marginBottom: -10 },
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
+              size={30}
               name={focused ? "home" : "home-outline"}
-              color={color}
+              color={focused ? PRIMARY_COLOR : GRAY}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "profile",
+          tabBarShowLabel: false,
+          tabBarIconStyle: { marginBottom: -10 },
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => (
+            <FontAwesome6
+              name="user"
+              size={30}
+              color={focused ? PRIMARY_COLOR : GRAY}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="stats"
         options={{
-          title: "Explore",
+          title: "Stats",
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarIconStyle: { marginBottom: -10 },
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
-              color={color}
+            <FontAwesome6
+              name="chart-simple"
+              size={30}
+              color={focused ? PRIMARY_COLOR : GRAY}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="rate"
+        options={{
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarIconStyle: { marginBottom: -10 },
+          title: "rate",
+          tabBarIcon: ({ color, focused }) => (
+            <FontAwesome6
+              name="calendar-plus"
+              size={30}
+              color={focused ? PRIMARY_COLOR : GRAY}
             />
           ),
         }}

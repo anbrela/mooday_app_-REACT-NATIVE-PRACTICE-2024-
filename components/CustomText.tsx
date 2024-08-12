@@ -45,7 +45,10 @@ export const CustomText = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Text style={[{ fontFamily: getFontFamily(classes) }, style]}>
+    <Text
+      className={classes}
+      style={[{ fontFamily: getFontFamily(classes) }, style]}
+    >
       {children}
     </Text>
   );
