@@ -1,5 +1,14 @@
 {
-  "welcome": "Hola",
+  "welcome": "Hola {{name}}, ¡qué bueno verte de nuevo!",
+          "tags": "tiene {{count}} modificadores",
+          "no-comment": "No hay comentarios",
   "greeting": "Hello, how are you?",
-  "login": "Accede a tu cuenta para ver el poder de "
+  "login": "Accede a tu cuenta para ver el poder de ",
+  "emotions": {
+    "sad": "Triste",
+    "not_good": "No muy bien",
+    "normal": "Normal",
+    "good": "Bien",
+    "happy": "Feliz"
+  }
 }

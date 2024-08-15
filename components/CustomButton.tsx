@@ -6,22 +6,34 @@ type CustomButtonProps = {
   label: string;
   onPress: () => void;
   className?: string;
+  kind?: "primary" | "secondary";
   disabled?: boolean;
 };
 
 export const Button = ({
   label,
   onPress,
+  kind = "primary",
   className,
   disabled,
 }: CustomButtonProps) => {
   return (
     <Pressable
-      className={`bg-violet-500 px-4 py-2 rounded   ${className} `}
+      className={`
+        mr-1 shadow
+        ${
+          kind === "primary" ? "bg-primary" : "bg-orange-200"
+        } px-6 py-4 rounded   ${className} `}
       onPress={onPress}
       disabled={disabled}
     >
-      <CustomText classes="text-white uppercase text-xs">{label}</CustomText>
+      <CustomText
+        classes={` uppercase font-semibold ${
+          kind === "primary" ? "text-white" : "text-gray-800"
+        }`}
+      >
+        {label}
+      </CustomText>
     </Pressable>
   );
 };

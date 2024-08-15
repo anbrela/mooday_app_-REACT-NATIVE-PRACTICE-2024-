@@ -11,12 +11,10 @@ const i18n = new I18n(translations);
 i18n.locale = getLocales()[0].languageCode ?? "en";
 i18n.enableFallback = true;
 
-
 export const useTranslations = () => {
-
-    const changeLanguage = (language: string) => {
+  const changeLanguage = (language: string) => {
     i18n.locale = language;
-    }
+  };
 
-  return { t: i18n.t.bind(i18n), changeLanguage };
+  return { t: i18n.t.bind(i18n), changeLanguage, currentLocale: i18n.locale };
 };

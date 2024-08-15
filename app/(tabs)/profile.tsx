@@ -1,12 +1,19 @@
 import React from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View } from "react-native";
+import { CustomText } from "@/components/CustomText";
+
+
+const user = {
+  name: "John Doe",
+  email: ""
+}
 
 export const Profile = () => {
   return (
     <SafeAreaView>
-      <View className="p-8 w-full bg-red-500">
+      <View className="p-8 w-full">
         <View>
-          <Text>Profile</Text>
+          <CustomText classes="">Zona de perfil</CustomText>
         </View>
       </View>
     </SafeAreaView>

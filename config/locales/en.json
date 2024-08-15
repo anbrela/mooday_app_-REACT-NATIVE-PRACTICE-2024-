@@ -1,5 +1,14 @@
 {
-    "welcome": "Welcome",
+    "welcome": "Welcome {{name}}, good to see you again!",
+      "tags": "has {{count}} modifiers",
+      "no-comment": "No comment added",
     "greeting": "Hello, how are you?",
-    "login": "Sign in to discover the power of"
+    "login": "Sign in to discover the power of",
+    "emotions": {
+      "sad": "Sad",
+      "not_good": "Not good",
+      "normal": "Normal",
+      "good": "Good",
+      "happy": "Happy"
+    }
   }

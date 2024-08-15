@@ -2,8 +2,8 @@ import { Tabs } from "expo-router";
 import React from "react";
 
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { GRAY, PRIMARY_COLOR } from "@/constants/Colors";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { GRAY, PRIMARY_COLOR } from "@/shared/constants/Colors";
 
 export default function TabLayout() {
   return (
@@ -62,12 +62,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="rate"
+        name="[date]"
         options={{
           tabBarShowLabel: false,
           headerShown: false,
           tabBarIconStyle: { marginBottom: -10 },
-          title: "rate",
+          title: "date",
           tabBarIcon: ({ color, focused }) => (
             <FontAwesome6
               name="calendar-plus"
