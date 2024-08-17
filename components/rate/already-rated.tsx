@@ -13,6 +13,16 @@ type Props = {
 };
 
 export const Tags = ({ tags }: { tags: TagType[] }) => {
+  if (!tags?.length) {
+    return (
+      <View>
+        <CustomText classes="text-xs italic text-extralight">
+          No hay modificadores
+        </CustomText>
+      </View>
+    );
+  }
+
   return (
     <View className="flex flex-row flex-wrap">
       {tags.map((tag: TagType) => (

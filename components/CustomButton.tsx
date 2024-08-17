@@ -1,11 +1,12 @@
-import { Pressable, Text } from "react-native";
+import { Pressable } from "react-native";
 
 import { CustomText } from "./CustomText";
+import { cn } from "@/lib/clsx";
 
 type CustomButtonProps = {
   label: string;
   onPress: () => void;
-  className?: string;
+  classes?: string;
   kind?: "primary" | "secondary";
   disabled?: boolean;
 };
@@ -14,16 +15,16 @@ export const Button = ({
   label,
   onPress,
   kind = "primary",
-  className,
+  classes,
   disabled,
 }: CustomButtonProps) => {
   return (
     <Pressable
-      className={`
+      className={cn(`
         mr-1 shadow
         ${
           kind === "primary" ? "bg-primary" : "bg-orange-200"
-        } px-6 py-4 rounded   ${className} `}
+        } px-6 py-4 rounded   ${classes} `)}
       onPress={onPress}
       disabled={disabled}
     >
