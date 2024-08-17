@@ -1,7 +1,6 @@
 
 
-const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWJsb25hdmVpcmFsb3BlekBnbWFpbC5jb20iLCJlbWFpbCI6InBhYmxvbmF2ZWlyYWxvcGV6QGdtYWlsLmNvbSIsImV4cCI6MTczMTUxODIyN30.G4PLtQWAkx1lY-k-vi83gvFP_YnxO7Q_bXIyKSn10RM"
-
+const token = "";
 export const get = async (url: string) => {
   const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}${url}`, {
     method: "GET",
